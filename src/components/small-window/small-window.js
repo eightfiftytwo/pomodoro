@@ -67,7 +67,7 @@ export class SmallWindow extends Adw.Window {
 
   /**
    *
-   * Setup event controles (Mouse enter|leave)...
+   * Setup event controls (Mouse enter|leave)...
    *
    */
   _setup_event_controller() {
@@ -81,3 +81,4 @@ export class SmallWindow extends Adw.Window {
     this._overlay.add_controller(controller)
   }
 }
+

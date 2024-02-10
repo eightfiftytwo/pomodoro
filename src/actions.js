@@ -59,6 +59,7 @@ export const application_actions = ({ application }) => {
   });
 
   active_action.connect("activate", () => {
+    application.get_active_window()._small_window.hide();
     application.active_window.show();
   });
 

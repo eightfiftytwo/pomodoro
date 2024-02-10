@@ -26,6 +26,7 @@ import Gdk from 'gi://Gdk';
 import { gettext as _ } from 'gettext';
 import Style from './assets/style.css';
 import { Window } from './window.js';
+import { SmallWindow } from './components/small-window/small-window.js';
 import { application_actions } from './actions.js';
 import { utils } from './utils.js';
 

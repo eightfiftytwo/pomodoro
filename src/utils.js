@@ -61,7 +61,7 @@ const format_time = (time) => {
  *
  * Sound Player
  * @param {object} params
- * @param {Adw.Applicatin} params.application
+ * @param {Adw.Application} params.application
  * @param {Settings} params.settings
  *
  */
@@ -172,7 +172,7 @@ export const notification = ({ application, settings }) => {
   /**
    *
    * Send notification
-   *  @param {object} params
+   * @param {object} params
    * @param {string} params.title
    * @param {string} params.body
    *
@@ -183,7 +183,7 @@ export const notification = ({ application, settings }) => {
     notification.set_body(body);
     const high_priority_notify = settings.get_boolean('high-priority-notify');
     notification.set_priority(high_priority_notify ? Gio.NotificationPriority.URGENT : Gio.NotificationPriority.NORMAL);
-    if(!application.get_active_window().visible) {
+    if(!application.get_active_window().visible && !application.get_active_window()._small_window.visible) {
       notification.add_button(
         _("Launch"),
         "app.open",
@@ -327,7 +327,6 @@ const time_utils = () => {
     timestamp: create_timestamp(),
   }
 }
-
 
 /**
  *

@@ -69,6 +69,7 @@ export class Window extends Adw.ApplicationWindow {
     this._statistics_page.set_child(this._statistics_page_component);
     this._small_window = new SmallWindow({ application });
     this._timer = application.utils.timer;
+    this.application = application;
 
     this._timer.connect('start', () => {
       this._shorten_window.set_sensitive(true);
@@ -104,10 +105,10 @@ export class Window extends Adw.ApplicationWindow {
       const value = parameter.get_string()[0];
       if (value === 'open') {
         this.hide();
-        this._small_window.present();
+        this._small_window.show();
       } else {
-        this.present();
         this._small_window.hide();
+        this.show();
       }
     });
     this.add_action(toggle_small_window);
