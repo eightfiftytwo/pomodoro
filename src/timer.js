@@ -234,6 +234,13 @@ export const timer = ({ application, pomodoro_item, settings, sound_player, noti
         notification.send({ title: `${_("Pomodoro started")} - ${pomodoro_item.get.title}`, body: `${_("Description")}: ${pomodoro_item.get.description}\n${_("Created at")}: ${pomodoro_item.get.display_date}` })
         sound_player.play({sound_settings: 'timer-start-sound'});
       } else if (current_time === 0) {
+        if (!settings.get_boolean('autostart')) {
+          timer_state = 'paused';
+          if(!application.get_active_window().visible)
+            application.utils.background_status.set_status({ message: `${_('Paused')}` });
+
+          event('end');
+        }
         notification.send({ title: `${_("Pomodoro break time")} - ${pomodoro_item.get.title}`, body: `${_("Description")}: ${pomodoro_item.get.description}\n${_("Created at")}: ${pomodoro_item.get.display_date}` })
         sound_player.play({ sound_settings: 'timer-break-sound'});
       }
