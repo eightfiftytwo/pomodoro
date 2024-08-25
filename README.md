@@ -46,12 +46,14 @@ Pomodoro has been translated into the following languages:
 
 Please help translate Pomodoro into more languages through [Weblate](https://hosted.weblate.org/engage/pomodoro/).
 
-## Donate
-If you like this project and have some spare money left, consider donating:
+## Important Notice
+I would like to inform you that the development of Pomodoro is currently on hold with no expected date for resumption. Due to this pause, the app will be removed from all app stores.
 
-### Ko-fi or Patreon
-<a href='https://ko-fi.com/idevecore'><img width='60' alt='To Ko-fi' src='https://storage.ko-fi.com/cdn/nav-logo-stroke.png'/></a>
-<a href='https://patreon.com/IdeveCore'><img width='60' alt='To Patreon' src='https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Flogosmarcas.net%2Fwp-content%2Fuploads%2F2020%2F11%2FPatreon-Logo-2013-2017.jpg&f=1&nofb=1&ipt=e6f7675606e3f61043f355654594c8e91710618e09f88bf646b65f6e4e664782&ipo=images'/></a>
+Please note that from now on, the only way to obtain the app will be through its source code, which is publicly available.
+
+Legal Disclaimer: I am not responsible for any use of the app in its current state. By choosing to use it, you do so at your own risk.
+
+Thank you for your understanding and support.
 
 ## License 
  [GNU General Public License 3 or later](https://www.gnu.org/licenses/gpl-3.0.en.html)
